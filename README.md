@@ -112,6 +112,9 @@ Retona as informações de clima de uma cidade. Se a previsão do tempo passou d
 Para realizar os testes basta adicionar a chave de API do open weather na variável de ambiente `WEATHER_APP_ID`.
 
 ```
+$env:APP_DATABASE="MEMORY" # no Windows
+set APP_DATABASE="MEMORY" # no Linux
+
 $env:WEATHER_APP_ID="<appid do open weather>" # no Windows
 set APP_WEATHER_ID="<appid do open weather>" # no Linux
 ```

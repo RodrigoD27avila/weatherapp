@@ -32,6 +32,7 @@ class ForecastCity(BaseModel):
 
 class ForecastResult(BaseModel):
     dt: int
+    dt_txt: str
     main: ForecastResultMain
     weather: List[ForecastResultWeather]
 

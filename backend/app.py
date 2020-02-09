@@ -5,6 +5,7 @@ from fastapi import FastAPI, HTTPException
 from starlette.middleware.cors import CORSMiddleware    
 from starlette.status import HTTP_200_OK, HTTP_201_CREATED, HTTP_303_SEE_OTHER, HTTP_404_NOT_FOUND
 
+from typing import List
 import models
 import database
 import weather
@@ -27,7 +28,7 @@ app.add_middleware(
 )
 
 
-@app.get('/cities/', status_code=HTTP_200_OK)
+@app.get('/cities/', response_model=List[models.City], status_code=HTTP_200_OK)
 async def list_all_cities():
     return database.fetch_cities()
 
@@ -43,7 +44,7 @@ async def insert_city(city: models.CityName):
     raise HTTPException(status_code=HTTP_303_SEE_OTHER, detail="Cidade já registrada.")
 
 
-@app.get('/cities/{city_id}')
+@app.get('/cities/{city_id}', response_model=models.City, status_code=HTTP_200_OK)
 async def update_forecast_cache(city_id):
     city = database.get_city(city_id)
     if (city is None):
