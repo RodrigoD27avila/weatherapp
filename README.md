@@ -45,7 +45,7 @@ Para iniciar a aplicação basta rodar o comando abaixo:
 uvicorn app:app
 ```
 
-o servidor será iniciado em http://localhost:800 para acessar a página da documentação da API utilize a URL http://localhost:8000/docs.
+o servidor será iniciado em http://localhost:8000 para acessar a página da documentação da API utilize a URL http://localhost:8000/docs.
 
 ## Setup do frontend
 
