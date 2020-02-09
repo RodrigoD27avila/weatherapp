@@ -79,12 +79,12 @@ Execute o servidor.
 serve -s build
 ```
 
-o servidor de fontend será inicializado em http://localhost:5000.
+O servidor de frontend será inicializado em http://localhost:5000.
 
 
 ## Arquitetura da aplicação
 
-A aplicação de backend consiste de uma API REST que utiliza a bibliotecas [FastAPI](https://fastapi.tiangolo.com/). Essa biblioteca permite a criação automática da documentação da API em [Swagger](https://swagger.io/). Já o banco de dados utilizado foi o [TinyDB](https://tinydb.readthedocs.io/en/latest/index.html). Esse banco de dados permite a persistência de objetos do python em formato JSON no disco ou em memória.
+A aplicação de backend consiste em uma API REST que utiliza a bibliotecas [FastAPI](https://fastapi.tiangolo.com/). Essa biblioteca permite a criação automática da documentação da API em [Swagger](https://swagger.io/). Já o banco de dados utilizado foi o [TinyDB](https://tinydb.readthedocs.io/en/latest/index.html). Esse banco de dados permite a persistência de objetos do python em formato JSON no disco ou em memória.
 
 Já a aplicação de Frontend foi desenvolvida utilizando [React](https://reactjs.org/) com [React Router](https://reacttraining.com/react-router/web/guides/quick-start). O controle de estados da aplicação é feito utilizando React Hooks.
 
@@ -106,7 +106,7 @@ Adiciona uma cidade nova pelo seu nome. Antes de ser inserida a cidade é feito 
 GET /cities/<id da cidade>
 ```
 
-Retona as informações de clima de uma cidade. Se a previsão do tempo passou de um dia o backend atualiza a previção para essa cidade ao mesmo tempo que a consulta é realizada.
+Retona as informações de clima de uma cidade. Se a previsão do tempo passou de um dia o backend atualiza a previsão para essa cidade ao mesmo tempo que a consulta é realizada.
 
 ## Testes
 Para realizar os testes basta adicionar a chave de API do open weather na variável de ambiente `WEATHER_APP_ID`.
