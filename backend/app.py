@@ -43,18 +43,6 @@ async def insert_city(city: models.CityName):
     raise HTTPException(status_code=HTTP_303_SEE_OTHER, detail="Cidade já registrada.")
 
 
-@app.put('/cities/{city_id}', status_code=HTTP_200_OK)
-async def update_city(city_id):
-    city = database.update_city(city_id)
-    return dict(city)
-
-
-@app.delete('/cities/{city_id}', status_code=HTTP_200_OK)
-async def delete_city(city_id):
-    database.delete_city(city_id)
-    return ''
-
-
 @app.get('/cities/{city_id}')
 async def update_forecast_cache(city_id):
     city = database.get_city(city_id)
